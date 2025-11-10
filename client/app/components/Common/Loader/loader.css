@@ -1,0 +1,156 @@
+/* .lms-loader {
+  width: 60px;
+  height: 60px;
+  border: 4px solid transparent;
+  border-top: 4px solid #3b82f6;
+  border-right: 4px solid #8b5cf6;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 1.5s linear infinite;
+  margin: 20px auto;
+}
+
+.lms-loader::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, #f59e0b, #ef4444);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.lms-loader::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid transparent;
+  border-top: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  animation: spin 2s linear infinite reverse;
+} */
+
+/* Dark theme support */
+/* .dark .lms-loader {
+  border-top-color: #60a5fa;
+  border-right-color: #a78bfa;
+}
+
+.dark .lms-loader::after {
+  border-top-color: rgba(96, 165, 250, 0.3);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse { */
+  /* 0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.5;
+  }
+} */
+.lms-loader {
+  width: 60px;
+  height: 60px;
+  border: 4px solid transparent;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-radius: 50%;
+  position: relative;
+  margin: 20px auto;
+  background: conic-gradient(
+    from 0deg,
+    #3b82f6,
+    #8b5cf6,
+    #f59e0b,
+    #ef4444,
+    #3b82f6
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black 0);
+  animation: spin 1.5s linear infinite;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5),
+              0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.lms-loader::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, #f59e0b, #ef4444);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.8),
+              0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+.lms-loader::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(139, 92, 246, 0.3), transparent 70%);
+  animation: spin 2s linear infinite reverse;
+}
+
+/* Dark theme support */
+.dark .lms-loader {
+  background: conic-gradient(
+    from 0deg,
+    #60a5fa,
+    #a78bfa,
+    #fbbf24,
+    #f87171,
+    #60a5fa
+  );
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.6),
+              0 0 40px rgba(96, 165, 250, 0.4);
+}
+
+.dark .lms-loader::after {
+  background: radial-gradient(rgba(96, 165, 250, 0.3), transparent 70%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.6;
+  }
+}
