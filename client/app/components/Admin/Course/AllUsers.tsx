@@ -157,7 +157,7 @@ const AllUsers = ({ isTeam }: Props) => {
   }
 
   return (
-    <div className="mt-[120px]">
+    <div className="w-full min-h-screen pl-[260px] pt-6 ">
       {isLoading ? (
         <Loader />
       ) : (

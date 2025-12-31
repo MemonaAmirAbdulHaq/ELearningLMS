@@ -34,7 +34,7 @@ const CourseAnalytics = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="h-screen">
+        <div className="h-screen ">
           <div className="mt-[50px]">
             <h1 className={`${styles.title} px-5 !items-start`}>
               Course Analytics

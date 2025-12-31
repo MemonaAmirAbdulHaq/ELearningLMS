@@ -95,7 +95,7 @@ const AllInvoices = ({ isDashboard }: Props) => {
     });
 
   return (
-    <div className={!isDashboard ? "mt-[120px]" : "mt-[0px]"}>
+    <div className={!isDashboard ? "w-full min-h-screen pl-[260px] pt-6" : "mt-[0px]"}>
       {isLoading ? (
         <Loader />
       ) : (
