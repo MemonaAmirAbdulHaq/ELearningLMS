@@ -7,8 +7,8 @@ const connectDB = async () => {
   try {
     await mongoose
       .connect(dbUrl, {
-        serverSelectionTimeoutMS: 30000,
-        socketTimeoutMS: 45000,
+        serverSelectionTimeoutMS: 40000,
+        socketTimeoutMS: 55000,
         retryWrites: true,
         maxPoolSize: 10,
       })
