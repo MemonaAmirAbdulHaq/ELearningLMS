@@ -11,7 +11,7 @@
   ],
   "functions": {
     "server.ts": {
-      "runtime": "nodejs18.x",
+      "runtime": "nodejs24.x",
       "maxDuration": 10,
       "memory": 1024
     }
