@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "name": "LMS Server",
+
   "builds": [
     {
       "src": "server.ts",
@@ -7,14 +9,9 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/server.ts" }
-  ],
-  "functions": {
-    "server.ts": {
-      "runtime": "nodejs24.x",
-      "maxDuration": 10,
-      "memory": 1024
+    {
+      "src": "/(.*)",
+      "dest": "/server.ts"
     }
-  },
-  "note": "Vercel uses serverless functions — persistent WebSocket or long-running servers (like your socketServer) are not supported. Consider deploying sockets elsewhere (Render, Fly, Heroku, etc.) and using environment variables to point to it."
+  ]
 }
